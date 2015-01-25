@@ -22,3 +22,6 @@
 [submodule "addons/ofxNI2"]
 	path = addons/ofxNI2
 	url = https://github.com/labatrockwell/ofxNI2.git
+[submodule "addons/ofxIpVideoGrabber"]
+	path = addons/ofxIpVideoGrabber
+	url = https://github.com/bakercp/ofxIpVideoGrabber.git
