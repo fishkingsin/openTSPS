@@ -80,6 +80,7 @@
 		0F8F016776681D468C0D0949 /* audio.c in Sources */ = {isa = PBXBuildFile; fileRef = 34FC4C582EA5ED68F36013CD /* audio.c */; };
 		125506CD3E5F428AAFE5CC65 /* ofxTCPManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F399B91E98DC31CDA6DDACB4 /* ofxTCPManager.cpp */; };
 		169D3C72FDE6C5590A1616F5 /* ofxCvFloatImage.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7B6A03390302D5A2C9F0E4AB /* ofxCvFloatImage.cpp */; };
+		1A010E231A74E11E0077E9ED /* IPVideoGrabber.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1A010E1D1A74E11E0077E9ED /* IPVideoGrabber.cpp */; };
 		1D5F3298C2FA073628012944 /* ofxCvContourFinder.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C76DE5C29BDBD2CAA1DD0021 /* ofxCvContourFinder.cpp */; };
 		21A059755481CC0BF969FD2D /* keep_alive.c in Sources */ = {isa = PBXBuildFile; fileRef = A3528DDFF05B00283552455D /* keep_alive.c */; };
 		250A95BA26587BE85DB0A353 /* ofxCvColorImage.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE9C7160245B19131DAE6128 /* ofxCvColorImage.cpp */; };
@@ -486,6 +487,9 @@
 		0AED834CE4DEC5260AF302A2 /* ofxOscParameterSync.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = ofxOscParameterSync.cpp; path = ../../../addons/ofxOsc/src/ofxOscParameterSync.cpp; sourceTree = SOURCE_ROOT; };
 		0CF0AA3895D28E97D8A1E4A9 /* ground_truth.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ground_truth.h; path = ../../../addons/ofxOpenCv/libs/opencv/include/opencv2/flann/ground_truth.h; sourceTree = SOURCE_ROOT; };
 		114B872696817CC33990FC83 /* imgproc.hpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = imgproc.hpp; path = ../../../addons/ofxOpenCv/libs/opencv/include/opencv2/imgproc/imgproc.hpp; sourceTree = SOURCE_ROOT; };
+		1A010E031A74E0F70077E9ED /* NetworkVideoGrabber.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetworkVideoGrabber.h; sourceTree = "<group>"; };
+		1A010E1D1A74E11E0077E9ED /* IPVideoGrabber.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = IPVideoGrabber.cpp; sourceTree = "<group>"; };
+		1A010E1E1A74E11E0077E9ED /* IPVideoGrabber.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IPVideoGrabber.h; sourceTree = "<group>"; };
 		1C085E327DAB912CFA2A443D /* ofxTCPServer.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = ofxTCPServer.cpp; path = ../../../addons/ofxNetwork/src/ofxTCPServer.cpp; sourceTree = SOURCE_ROOT; };
 		1DFA26F2C6BBD1B8AC24C0B1 /* ofxNetworkUtils.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ofxNetworkUtils.h; path = ../../../addons/ofxNetwork/src/ofxNetworkUtils.h; sourceTree = SOURCE_ROOT; };
 		1E95EFD35ED9C5D97F2F015E /* timer.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = timer.h; path = ../../../addons/ofxOpenCv/libs/opencv/include/opencv2/flann/timer.h; sourceTree = SOURCE_ROOT; };
@@ -1338,6 +1342,7 @@
 				01059A9118F6E72E003CC75F /* Syphon.h */,
 				01059A9218F6E72E003CC75F /* VideoFile.h */,
 				01059A9318F6E72E003CC75F /* VideoGrabber.h */,
+				1A010E031A74E0F70077E9ED /* NetworkVideoGrabber.h */,
 			);
 			path = source;
 			sourceTree = "<group>";
@@ -1693,6 +1698,7 @@
 		0140AA8518F6E143009CF983 /* tsps */ = {
 			isa = PBXGroup;
 			children = (
+				1A010E041A74E11E0077E9ED /* ofxIpVideoGrabber */,
 				0105946D18F6E724003CC75F /* ofxCv */,
 				0105970118F6E72A003CC75F /* ofxLabGui */,
 				0105971C18F6E72A003CC75F /* ofxLibwebsockets */,
@@ -1802,6 +1808,24 @@
 				219374A14594D121F27FED3A /* src */,
 			);
 			name = ofxNetwork;
+			sourceTree = "<group>";
+		};
+		1A010E041A74E11E0077E9ED /* ofxIpVideoGrabber */ = {
+			isa = PBXGroup;
+			children = (
+				1A010E1C1A74E11E0077E9ED /* src */,
+			);
+			name = ofxIpVideoGrabber;
+			path = ../../addons/ofxIpVideoGrabber;
+			sourceTree = "<group>";
+		};
+		1A010E1C1A74E11E0077E9ED /* src */ = {
+			isa = PBXGroup;
+			children = (
+				1A010E1D1A74E11E0077E9ED /* IPVideoGrabber.cpp */,
+				1A010E1E1A74E11E0077E9ED /* IPVideoGrabber.h */,
+			);
+			path = src;
 			sourceTree = "<group>";
 		};
 		1E45F8C3CCFF6847BFF957AA /* flann */ = {
@@ -2499,6 +2523,7 @@
 				169D3C72FDE6C5590A1616F5 /* ofxCvFloatImage.cpp in Sources */,
 				FB09C6B2A1DA0EA217240CB8 /* ofxCvGrayscaleImage.cpp in Sources */,
 				E212C821D1064B92DD953A42 /* ofxCvHaarFinder.cpp in Sources */,
+				1A010E231A74E11E0077E9ED /* IPVideoGrabber.cpp in Sources */,
 				01059B8B18F6E72E003CC75F /* Events.cpp in Sources */,
 				63020F16C7E8DED980111241 /* ofxCvImage.cpp in Sources */,
 				D3301F6A0B43BB293ED97C1D /* ofxCvShortImage.cpp in Sources */,
@@ -2553,6 +2578,7 @@
 					src,
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				OFX_IPCAM_INC = "$(TSPS_ADDONS_PATH)/ofxIpVideoGrabber/src/";
 				OTHER_CPLUSPLUSFLAGS = (
 					"-D__MACOSX_CORE__",
 					"-lpthread",
@@ -2560,6 +2586,7 @@
 				);
 				OTHER_LDFLAGS = "$(OTHER_LDFLAGS)";
 				SDKROOT = macosx;
+				TSPS_ADDON_HEADERS = "$(OFX_KINECT_HEADERS) $(OFX_OPENCV_HEADERS) $(OFX_CV_INC) $(OFX_LWS_INCLUDES) $(OFX_OSC_INC) $(OFX_TUIO_INC) $(OFX_NI2_HEADERS) $(OFX_TSPS_INC) $(OFX_IPVIDEOGRABBER_INCLUDE) $(OFX_IPCAM_INC)";
 			};
 			name = Debug;
 		};
@@ -2589,6 +2616,7 @@
 					src,
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				OFX_IPCAM_INC = "$(TSPS_ADDONS_PATH)/ofxIpVideoGrabber/src/";
 				OTHER_CPLUSPLUSFLAGS = (
 					"-D__MACOSX_CORE__",
 					"-lpthread",
@@ -2596,6 +2624,7 @@
 				);
 				OTHER_LDFLAGS = "$(OTHER_LDFLAGS)";
 				SDKROOT = macosx;
+				TSPS_ADDON_HEADERS = "$(OFX_KINECT_HEADERS) $(OFX_OPENCV_HEADERS) $(OFX_CV_INC) $(OFX_LWS_INCLUDES) $(OFX_OSC_INC) $(OFX_TUIO_INC) $(OFX_NI2_HEADERS) $(OFX_TSPS_INC) $(OFX_IPVIDEOGRABBER_INCLUDE) $(OFX_IPCAM_INC)";
 			};
 			name = Release;
 		};
@@ -2613,6 +2642,11 @@
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
 				GCC_MODEL_TUNING = NONE;
+				HEADER_SEARCH_PATHS = (
+					"$(HEADER_SEARCH_PATHS)",
+					src,
+					"$(TSPS_ADDONS_PATH)/ofxIpVideoGrabber/src/\n",
+				);
 				ICON = "$(ICON_NAME_DEBUG)";
 				ICON_FILE = "$(ICON_FILE_PATH)$(ICON)";
 				INFOPLIST_FILE = "openFrameworks-Info.plist";
@@ -2699,6 +2733,7 @@
 					"$(TSPS_ADDONS_PATH)/ofxNI2/libs/OpenNI2/lib/win32",
 				);
 				PRODUCT_NAME = TSPSDebug;
+				USER_HEADER_SEARCH_PATHS = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -2716,6 +2751,11 @@
 				FRAMEWORK_SEARCH_PATHS_QUOTED_FOR_TARGET_1 = "\"$(SRCROOT)/../../../libs/glut/lib/osx\"";
 				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
 				GCC_MODEL_TUNING = NONE;
+				HEADER_SEARCH_PATHS = (
+					"$(HEADER_SEARCH_PATHS)",
+					src,
+					"$(TSPS_ADDONS_PATH)/ofxIpVideoGrabber/src/\n",
+				);
 				ICON = "$(ICON_NAME_RELEASE)";
 				ICON_FILE = "$(ICON_FILE_PATH)$(ICON)";
 				INFOPLIST_FILE = "openFrameworks-Info.plist";
@@ -2802,6 +2842,7 @@
 					"$(TSPS_ADDONS_PATH)/ofxNI2/libs/OpenNI2/lib/win32",
 				);
 				PRODUCT_NAME = TSPS;
+				USER_HEADER_SEARCH_PATHS = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

@@ -1,5 +1,5 @@
 <SOURCE_TYPE>
-    <val_0>0.000000000</val_0>
+    <val_0>4.000000000</val_0>
 </SOURCE_TYPE>
 <VIDEO_FILE_DIR>
     <val_0>videos</val_0>
@@ -156,3 +156,9 @@
 <HIGHPASS_KERNEL>
     <val_0>1.000000000</val_0>
 </HIGHPASS_KERNEL>
+<IP_CAM_ADDRESS>
+    <val_0>http://82.79.176.85:8081/axis-cgi/mjpg/video.cgi?resolution=320x240</val_0>
+</IP_CAM_ADDRESS>
+<IPCAM_RELOAD>
+    <val_0>0.000000000</val_0>
+</IPCAM_RELOAD>

@@ -55,6 +55,12 @@ namespace ofxTSPS {
         string  videoFile;
         bool    bReloadVideoFiles;
         
+        // ipcam var;
+        string ipcamUrl;
+        string ipcamName;
+        string ipcamUsername;
+        string ipcamPassword;
+        
         // image vars
         bool    bFlipX, bFlipY;
         bool    bInvert;
@@ -127,8 +133,9 @@ namespace ofxTSPS {
         void setSource( Source * source);
         Source*         getSource();
         SourceType      getInputType();
+        void            setInputType(SourceType newInputType);
         int             cameraIndex;
-        SourceType      inputType;
+
         
         //layout vars
         int lastCurrentPanel;
@@ -144,7 +151,7 @@ namespace ofxTSPS {
         
     private:
         Source*         source;
-        
+        SourceType      inputType;
         static bool     instanceFlag;
         static Settings *single;
     };

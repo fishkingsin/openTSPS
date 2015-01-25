@@ -48,6 +48,10 @@
 #include "ofxTSPS/source/Syphon.h"
 #include "ofxTSPS/source/VideoFile.h"
 #include "ofxTSPS/source/VideoGrabber.h"
+#define TEST_NETWORKVIDEO_GRABBER
+#ifdef TEST_NETWORKVIDEO_GRABBER
+#include "ofxTSPS/source/NetworkVideoGrabber.h"
+#endif
 
 namespace ofxTSPS {
     typedef struct  {

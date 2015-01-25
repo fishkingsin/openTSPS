@@ -38,6 +38,7 @@ namespace ofxTSPS {
         CAMERA_OPENNI,
         CAMERA_SYPHON,
         CAMERA_CUSTOM,
+        CAMERA_IPVIDEOGRABBER,
         CAMERA_UNDEFINED
     };
     

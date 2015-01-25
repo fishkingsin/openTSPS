@@ -206,7 +206,10 @@ namespace ofxTSPS {
             setupSource( CAMERA_SYPHON );
         }
 #endif
-        
+        else if ( useIPVideoGrabber() && (currentSource == NULL || currentSource->getType() != CAMERA_IPVIDEOGRABBER) ){
+            setupSource( CAMERA_IPVIDEOGRABBER );
+        }
+
         // update source
         bool bNewFrame = false;
         if ( currentSource != NULL && currentSource->isOpen() ){
@@ -507,6 +510,11 @@ namespace ofxTSPS {
                 }
                 currentSource = new VideoFile();
                 break;
+            case CAMERA_IPVIDEOGRABBER:
+                currentSource = new NetworkVideoGrabber();
+                etc = getIPCamURL();
+
+                break;
             case CAMERA_OPENNI:
                 currentSource = new OpenNI2();
                 break;
@@ -539,6 +547,9 @@ namespace ofxTSPS {
                 break;
             case CAMERA_CUSTOM:
                 setUseCustomSource();
+                break;
+            case CAMERA_IPVIDEOGRABBER:
+                setUseIPVideoGrabber(true, which);
                 break;
             default:
                 break;
@@ -1429,7 +1440,7 @@ namespace ofxTSPS {
     //---------------------------------------------------------------------------
     bool PeopleTracker::useVideoGrabber(){
         if (p_Settings == NULL) p_Settings = gui.getSettings();
-        return p_Settings->inputType == CAMERA_VIDEOGRABBER;
+        return p_Settings->getInputType() == CAMERA_VIDEOGRABBER;
     }
     
     //---------------------------------------------------------------------------
@@ -1438,16 +1449,33 @@ namespace ofxTSPS {
             if (p_Settings == NULL) p_Settings = gui.getSettings();
             gui.setValueI( "SOURCE_TYPE", gui.getSourceSelectionIndex( CAMERA_VIDEOGRABBER, deviceIndex) );
             gui.update();
-            p_Settings->inputType = CAMERA_VIDEOGRABBER;
+            p_Settings->setInputType(  CAMERA_VIDEOGRABBER ) ;
         }
     }
+    
+    //---------------------------------------------------------------------------
+    void PeopleTracker::setUseIPVideoGrabber( bool bUseIPVideoGrabber, int deviceIndex ){
+        if ( bUseIPVideoGrabber ){
+            if (p_Settings == NULL) p_Settings = gui.getSettings();
+//            gui.setValueI( "SOURCE_TYPE", gui.getSourceSelectionIndex( CAMERA_IPVIDEOGRABBER, deviceIndex) );
+            gui.update();
+            p_Settings->setInputType( CAMERA_IPVIDEOGRABBER );
+        }
+    }
+    
+    //---------------------------------------------------------------------------
+    bool PeopleTracker::useIPVideoGrabber(){
+        if (p_Settings == NULL) p_Settings = gui.getSettings();
+        return p_Settings->getInputType() == CAMERA_IPVIDEOGRABBER;
+    }
+    
     
 #ifndef TSPS_ONLY_OPENNI
     
     //---------------------------------------------------------------------------
     bool PeopleTracker::useKinect(){
         if (p_Settings == NULL) p_Settings = gui.getSettings();
-        return p_Settings->inputType == CAMERA_KINECT;
+        return p_Settings->getInputType() == CAMERA_KINECT;
     }
     
     //---------------------------------------------------------------------------
@@ -1456,7 +1484,7 @@ namespace ofxTSPS {
             gui.setValueI( "SOURCE_TYPE", gui.getSourceSelectionIndex( CAMERA_KINECT, deviceIndex) );
             gui.update();
             if (p_Settings == NULL) p_Settings = gui.getSettings();
-            p_Settings->inputType = CAMERA_KINECT;
+            p_Settings->setInputType( CAMERA_KINECT);
         }
     }
 #endif
@@ -1464,7 +1492,7 @@ namespace ofxTSPS {
     //---------------------------------------------------------------------------
     bool    PeopleTracker::useOpenNI(){
         if (p_Settings == NULL) p_Settings = gui.getSettings();
-        return p_Settings->inputType == CAMERA_OPENNI;
+        return p_Settings->getInputType() == CAMERA_OPENNI;
     }
     
     //---------------------------------------------------------------------------
@@ -1473,14 +1501,14 @@ namespace ofxTSPS {
             gui.setValueI( "SOURCE_TYPE", gui.getSourceSelectionIndex( CAMERA_OPENNI, deviceIndex) );
             gui.update();
             if (p_Settings == NULL) p_Settings = gui.getSettings();
-            p_Settings->inputType = CAMERA_OPENNI;
+            p_Settings->setInputType( CAMERA_OPENNI);
         }
     }
     
     //---------------------------------------------------------------------------
     bool PeopleTracker::useVideoFile(){    
         if (p_Settings == NULL) p_Settings = gui.getSettings();
-        return p_Settings->inputType == CAMERA_VIDEOFILE;
+        return p_Settings->getInputType() == CAMERA_VIDEOFILE;
     }
     
     //---------------------------------------------------------------------------
@@ -1489,7 +1517,7 @@ namespace ofxTSPS {
             gui.setValueI( "SOURCE_TYPE", gui.getSourceSelectionIndex( CAMERA_VIDEOFILE, deviceIndex) );
             gui.update();
             if (p_Settings == NULL) p_Settings = gui.getSettings();
-            p_Settings->inputType = CAMERA_VIDEOFILE;            
+            p_Settings->setInputType( CAMERA_VIDEOFILE);
         }
     }
     
@@ -1504,11 +1532,19 @@ namespace ofxTSPS {
         p_Settings->videoFile = file;    
     }
     
+    //---------------------------------------------------------------------------
+    string PeopleTracker::getIPCamURL(){
+        if (p_Settings == NULL) p_Settings = gui.getSettings();
+        return p_Settings->ipcamUrl;
+    }
+    
+    
+    
 #ifdef TARGET_OSX
     //---------------------------------------------------------------------------
     bool PeopleTracker::useSyphon(){
         if (p_Settings == NULL) p_Settings = gui.getSettings();
-        return p_Settings->inputType == CAMERA_SYPHON;
+        return p_Settings->getInputType() == CAMERA_SYPHON;
     }
     
     //---------------------------------------------------------------------------
@@ -1517,7 +1553,7 @@ namespace ofxTSPS {
             gui.setValueI( "SOURCE_TYPE", CAMERA_SYPHON );
             gui.update();
             if (p_Settings == NULL) p_Settings = gui.getSettings();
-            p_Settings->inputType = CAMERA_SYPHON;
+            p_Settings->setInputType( CAMERA_SYPHON);
         }
     }
 #endif
@@ -1525,7 +1561,7 @@ namespace ofxTSPS {
     //---------------------------------------------------------------------------
     bool PeopleTracker::useCustomSource(){
         if (p_Settings == NULL) p_Settings = gui.getSettings();
-        return p_Settings->inputType == CAMERA_CUSTOM;
+        return p_Settings->getInputType() == CAMERA_CUSTOM;
     }
     
     //---------------------------------------------------------------------------
@@ -1534,7 +1570,7 @@ namespace ofxTSPS {
             gui.setValueI( "SOURCE_TYPE", CAMERA_CUSTOM );
             gui.update();
             if (p_Settings == NULL) p_Settings = gui.getSettings();
-            p_Settings->inputType = CAMERA_CUSTOM;
+            p_Settings->setInputType( CAMERA_CUSTOM);
         }
     }
     

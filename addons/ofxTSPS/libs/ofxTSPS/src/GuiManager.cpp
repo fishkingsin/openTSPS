@@ -178,6 +178,8 @@ namespace ofxTSPS {
             currentSources[currentSources.size()] = sel;
         }
         
+
+        
 #ifndef TSPS_ONLY_OPENNI
         Kinect dummyKinect;
         int numKinects = dummyKinect.numAvailable();
@@ -217,6 +219,13 @@ namespace ofxTSPS {
         currentSources[currentSources.size()] = syphonSelection;
         source_types.push_back("Syphon");
 #endif
+        SourceSelection ipcamSelection;
+        ipcamSelection.type = CAMERA_IPVIDEOGRABBER;
+        ipcamSelection.index = 0;
+        currentSources[currentSources.size()] = ipcamSelection;
+        source_types.push_back("ipcam");
+
+        
         SourceSelection customSelection;
         customSelection.type = CAMERA_SYPHON;
         customSelection.index = 0;
@@ -238,6 +247,19 @@ namespace ofxTSPS {
         ofLogVerbose()<< "num video files found: " << numVideoFiles;
         panel.addFileLister("video files:", videoFiles, 240, 100);
         panel.addToggle("reload directory", "VIDEO_FILE_RELOAD", true);
+        
+        // ip cam
+        guiTypeGroup * ipCamGroup = panel.addGroup("ipcam");
+        ipCamGroup->setBackgroundColor(148,129,85);
+        ipCamGroup->setBackgroundSelectColor(148,129,85);
+        ipCamGroup->seBaseColor(58,187,147);
+        ipCamGroup->setShowText(false);
+        panel.addTextField("URL", "IP_CAM_ADDRESS", "127.0.0.1", 200, 20);
+//        panel.addTextField("Name", "IP_CAM_NAME", "", 200, 20);
+//        panel.addTextField("Username", "IP_CAM_USERNAME", "", 200, 20);
+//        panel.addTextField("Password", "IP_CAM_PASSWORD", "", 200, 20);
+        panel.addToggle("reload ipcam","IPCAM_RELOAD",true);
+        
         
         // flip + invert
         guiTypeGroup * adjustGroup = panel.addGroup("adjust camera");
@@ -841,14 +863,18 @@ namespace ofxTSPS {
         //settings.cameraIndex = panel.getValueF("CAMERA_INDEX");
         //settings.bUseKinect  = panel.getValueB("USE_KINECT");
 		int index = panel.getValueI("SOURCE_TYPE");
-        
-        settings.inputType      = currentSources[index].type;
+        settings.setInputType( currentSources[index].type );
         settings.cameraIndex    = currentSources[index].index;
         
-        if ( settings.inputType == CAMERA_VIDEOFILE){
+        if ( settings.getInputType() == CAMERA_VIDEOFILE){
             panel.getElement("videoFiles")->enable();
         } else {
             panel.getElement("videoFiles")->disable();
+        }
+        if ( settings.getInputType() == CAMERA_IPVIDEOGRABBER){
+            panel.getElement("ipcam")->enable();
+        } else {
+            panel.getElement("ipcam")->disable();
         }
         
         // video files
@@ -869,6 +895,31 @@ namespace ofxTSPS {
         }
         if(videoFiles->getSelectedName() != ""){
             settings.videoFile = videoFiles->getSelectedPath();
+        }
+        
+        
+        //ipcam
+
+        if(settings.ipcamUrl != panel.getValueS("IP_CAM_ADDRESS"))
+        {
+            settings.ipcamUrl = panel.getValueS("IP_CAM_ADDRESS");
+        }
+//        if(settings.ipcamName != panel.getValueS("IP_CAM_NAME"))
+//        {
+//            settings.ipcamName = panel.getValueS("IP_CAM_NAME");
+//        }
+//        if(settings.ipcamUsername != panel.getValueS("IP_CAM_USERNAME"))
+//        {
+//            settings.ipcamUsername = panel.getValueS("IP_CAM_USERNAME");
+//        }
+//        if(settings.ipcamPassword != panel.getValueS("IP_CAM_PASSWORD"))
+//        {
+//            settings.ipcamPassword = panel.getValueS("IP_CAM_PASSWORD");
+//        }
+        if ( panel.getValueB("IPCAM_RELOAD") || bIsNewDirectory){
+            
+            panel.setValueB("IPCAM_RELOAD", false);
+            
         }
         
         // threshold

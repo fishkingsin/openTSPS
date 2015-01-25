@@ -85,7 +85,13 @@ namespace ofxTSPS {
     };
     
     SourceType Settings::getInputType(){
+
         return inputType;
-    };
+    }
+    void Settings::setInputType(SourceType newInputType)
+    {
+        inputType = newInputType;
+    }
+    
 }
 

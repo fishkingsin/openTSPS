@@ -112,6 +112,8 @@ namespace ofxTSPS {
             void    setUseVideoFile( bool bUseVideoFile = true, int deviceIndex=0);
             bool    useVideoGrabber();
             void    setUseVideoGrabber( bool bUseVideoGrabber = true, int deviceIndex=0);
+            void    setUseIPVideoGrabber( bool bUseIPVideoGrabber, int deviceIndex );
+            bool    useIPVideoGrabber();
 #ifdef TARGET_OSX
             bool    useSyphon();
             void    setUseSyphon( bool bUseSyphon = true);
@@ -184,6 +186,9 @@ namespace ofxTSPS {
             // video file stuff
             string  getVideoFile();
             void    setVideoFile( string file );
+        
+            //ipcam stuff
+            string getIPCamURL();
         
             //drawing methods
             void setDrawMode(int mode);
