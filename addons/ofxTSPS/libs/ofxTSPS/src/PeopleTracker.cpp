@@ -206,7 +206,7 @@ namespace ofxTSPS {
             setupSource( CAMERA_SYPHON );
         }
 #endif
-        else if ( useIPVideoGrabber() && (currentSource == NULL || currentSource->getType() != CAMERA_IPVIDEOGRABBER) ){
+        else if ( useIPVideoGrabber() && (currentSource == NULL || currentSource->getType() != CAMERA_IPVIDEOGRABBER) && getIPCamURL() != currentSource->getCustomData() ){
             setupSource( CAMERA_IPVIDEOGRABBER );
         }
 

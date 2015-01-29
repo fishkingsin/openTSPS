@@ -255,9 +255,9 @@ namespace ofxTSPS {
         ipCamGroup->seBaseColor(58,187,147);
         ipCamGroup->setShowText(false);
         panel.addTextField("URL", "IP_CAM_ADDRESS", "127.0.0.1", 200, 20);
-//        panel.addTextField("Name", "IP_CAM_NAME", "", 200, 20);
-//        panel.addTextField("Username", "IP_CAM_USERNAME", "", 200, 20);
-//        panel.addTextField("Password", "IP_CAM_PASSWORD", "", 200, 20);
+        panel.addTextField("Name", "IP_CAM_NAME", "", 200, 20);
+        panel.addTextField("Username", "IP_CAM_USERNAME", "", 200, 20);
+        panel.addTextField("Password", "IP_CAM_PASSWORD", "", 200, 20);
         panel.addToggle("reload ipcam","IPCAM_RELOAD",true);
         
         
@@ -916,10 +916,10 @@ namespace ofxTSPS {
 //        {
 //            settings.ipcamPassword = panel.getValueS("IP_CAM_PASSWORD");
 //        }
-        if ( panel.getValueB("IPCAM_RELOAD") || bIsNewDirectory){
+        if ( panel.getValueB("IPCAM_RELOAD")){
             
             panel.setValueB("IPCAM_RELOAD", false);
-            
+            settings.ipcamUrl = panel.getValueS("IP_CAM_ADDRESS");
         }
         
         // threshold

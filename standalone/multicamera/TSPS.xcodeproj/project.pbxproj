@@ -81,6 +81,7 @@
 		0F8F016776681D468C0D0949 /* audio.c in Sources */ = {isa = PBXBuildFile; fileRef = 34FC4C582EA5ED68F36013CD /* audio.c */; };
 		125506CD3E5F428AAFE5CC65 /* ofxTCPManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F399B91E98DC31CDA6DDACB4 /* ofxTCPManager.cpp */; };
 		169D3C72FDE6C5590A1616F5 /* ofxCvFloatImage.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7B6A03390302D5A2C9F0E4AB /* ofxCvFloatImage.cpp */; };
+		1ACD0E6E1A79DD1900B0FDEA /* IPVideoGrabber.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1ACD0E681A79DD1900B0FDEA /* IPVideoGrabber.cpp */; };
 		1D5F3298C2FA073628012944 /* ofxCvContourFinder.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C76DE5C29BDBD2CAA1DD0021 /* ofxCvContourFinder.cpp */; };
 		21A059755481CC0BF969FD2D /* keep_alive.c in Sources */ = {isa = PBXBuildFile; fileRef = A3528DDFF05B00283552455D /* keep_alive.c */; };
 		250A95BA26587BE85DB0A353 /* ofxCvColorImage.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE9C7160245B19131DAE6128 /* ofxCvColorImage.cpp */; };
@@ -486,6 +487,8 @@
 		0AED834CE4DEC5260AF302A2 /* ofxOscParameterSync.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = ofxOscParameterSync.cpp; path = ../../../addons/ofxOsc/src/ofxOscParameterSync.cpp; sourceTree = SOURCE_ROOT; };
 		0CF0AA3895D28E97D8A1E4A9 /* ground_truth.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ground_truth.h; path = ../../../addons/ofxOpenCv/libs/opencv/include/opencv2/flann/ground_truth.h; sourceTree = SOURCE_ROOT; };
 		114B872696817CC33990FC83 /* imgproc.hpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = imgproc.hpp; path = ../../../addons/ofxOpenCv/libs/opencv/include/opencv2/imgproc/imgproc.hpp; sourceTree = SOURCE_ROOT; };
+		1ACD0E681A79DD1900B0FDEA /* IPVideoGrabber.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = IPVideoGrabber.cpp; sourceTree = "<group>"; };
+		1ACD0E691A79DD1900B0FDEA /* IPVideoGrabber.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IPVideoGrabber.h; sourceTree = "<group>"; };
 		1C085E327DAB912CFA2A443D /* ofxTCPServer.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = ofxTCPServer.cpp; path = ../../../addons/ofxNetwork/src/ofxTCPServer.cpp; sourceTree = SOURCE_ROOT; };
 		1DFA26F2C6BBD1B8AC24C0B1 /* ofxNetworkUtils.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ofxNetworkUtils.h; path = ../../../addons/ofxNetwork/src/ofxNetworkUtils.h; sourceTree = SOURCE_ROOT; };
 		1E95EFD35ED9C5D97F2F015E /* timer.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = timer.h; path = ../../../addons/ofxOpenCv/libs/opencv/include/opencv2/flann/timer.h; sourceTree = SOURCE_ROOT; };
@@ -711,6 +714,7 @@
 		01058C5118F6E433003CC75F /* tsps */ = {
 			isa = PBXGroup;
 			children = (
+				1ACD0E4D1A79DD1900B0FDEA /* ofxIpVideoGrabber */,
 				01059D5E18F70080003CC75F /* ofxNI2 */,
 				01058C5318F6E44E003CC75F /* ofxCv */,
 				01058EE718F6E454003CC75F /* ofxLabGui */,
@@ -1775,6 +1779,24 @@
 			name = ofxNetwork;
 			sourceTree = "<group>";
 		};
+		1ACD0E4D1A79DD1900B0FDEA /* ofxIpVideoGrabber */ = {
+			isa = PBXGroup;
+			children = (
+				1ACD0E671A79DD1900B0FDEA /* src */,
+			);
+			name = ofxIpVideoGrabber;
+			path = ../../addons/ofxIpVideoGrabber;
+			sourceTree = "<group>";
+		};
+		1ACD0E671A79DD1900B0FDEA /* src */ = {
+			isa = PBXGroup;
+			children = (
+				1ACD0E681A79DD1900B0FDEA /* IPVideoGrabber.cpp */,
+				1ACD0E691A79DD1900B0FDEA /* IPVideoGrabber.h */,
+			);
+			path = src;
+			sourceTree = "<group>";
+		};
 		1AE6862ED862CA18468E0CCD /* include */ = {
 			isa = PBXGroup;
 			children = (
@@ -2494,6 +2516,7 @@
 				0105931518F6E458003CC75F /* ContourFinder.cpp in Sources */,
 				010593CA18F6E458003CC75F /* TSPSEvents.cpp in Sources */,
 				FCC16AB16073FF0581F50ED7 /* loader.c in Sources */,
+				1ACD0E6E1A79DD1900B0FDEA /* IPVideoGrabber.cpp in Sources */,
 				010593BB18F6E458003CC75F /* ofxSyphonServerDirectory.mm in Sources */,
 				010593CC18F6E458003CC75F /* Utils.cpp in Sources */,
 				0105936A18F6E458003CC75F /* Client.cpp in Sources */,

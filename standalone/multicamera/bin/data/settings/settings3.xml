@@ -1,5 +1,5 @@
 <SOURCE_TYPE>
-    <val_0>1.000000000</val_0>
+    <val_0>4.000000000</val_0>
 </SOURCE_TYPE>
 <VIDEO_FILE_DIR>
     <val_0>videos</val_0>
@@ -156,3 +156,18 @@
 <SCENE_GRID_Y>
     <val_0>0.000000000</val_0>
 </SCENE_GRID_Y>
+<IP_CAM_ADDRESS>
+    <val_0>http://216.8.159.21/axis-cgi/mjpg/video.cgi?resolution=320x240</val_0>
+</IP_CAM_ADDRESS>
+<IPCAM_RELOAD>
+    <val_0>0.000000000</val_0>
+</IPCAM_RELOAD>
+<IP_CAM_NAME>
+    <val_0 />
+</IP_CAM_NAME>
+<IP_CAM_USERNAME>
+    <val_0 />
+</IP_CAM_USERNAME>
+<IP_CAM_PASSWORD>
+    <val_0 />
+</IP_CAM_PASSWORD>
