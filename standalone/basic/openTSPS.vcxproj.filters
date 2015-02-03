@@ -274,6 +274,15 @@
     <ClCompile Include="..\..\addons\ofxCv\libs\CLD\src\fdog.cpp">
       <Filter>addons\third-party\ofxCv\libs\CLD\src</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\..\addons\ofxIpVideoGrabber\example\src\main.cpp">
+      <Filter>addons\third-party</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\addons\ofxIpVideoGrabber\example\src\ofApp.cpp">
+      <Filter>addons\third-party</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\addons\ofxIpVideoGrabber\src\IPVideoGrabber.cpp">
+      <Filter>addons\third-party</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="src">
@@ -551,6 +560,12 @@
     </Filter>
     <Filter Include="addons\ofxKinect\libs\libfreenect\include">
       <UniqueIdentifier>{F7A2459D-BD30-38D3-05BB-4653}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="addons\third-party\ofxIPVideoGrabber">
+      <UniqueIdentifier>{434d370d-218b-4a94-8246-4adbd5d64b95}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="addons\third-party\ofxIPVideoGrabber\src">
+      <UniqueIdentifier>{e0ae56e3-37c0-433a-a944-2942b7b8377a}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -1352,5 +1367,160 @@
     <ClInclude Include="..\..\addons\ofxNI2\libs\NiTE2\include\NiteCAPI.h">
       <Filter>addons\third-party\ofxNI2\libs\nite</Filter>
     </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxIpVideoGrabber\example\bin\exampleDebug.app\Contents\Frameworks\GLUT.framework\Headers\copy.h">
+      <Filter>addons\third-party</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxIpVideoGrabber\example\bin\exampleDebug.app\Contents\Frameworks\GLUT.framework\Headers\extrude.h">
+      <Filter>addons\third-party</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxIpVideoGrabber\example\bin\exampleDebug.app\Contents\Frameworks\GLUT.framework\Headers\glsmap.h">
+      <Filter>addons\third-party</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxIpVideoGrabber\example\bin\exampleDebug.app\Contents\Frameworks\GLUT.framework\Headers\glsmapint.h">
+      <Filter>addons\third-party</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxIpVideoGrabber\example\bin\exampleDebug.app\Contents\Frameworks\GLUT.framework\Headers\glut.h">
+      <Filter>addons\third-party</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxIpVideoGrabber\example\bin\exampleDebug.app\Contents\Frameworks\GLUT.framework\Headers\glutbitmap.h">
+      <Filter>addons\third-party</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxIpVideoGrabber\example\bin\exampleDebug.app\Contents\Frameworks\GLUT.framework\Headers\glutf90.h">
+      <Filter>addons\third-party</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxIpVideoGrabber\example\bin\exampleDebug.app\Contents\Frameworks\GLUT.framework\Headers\glutstroke.h">
+      <Filter>addons\third-party</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxIpVideoGrabber\example\bin\exampleDebug.app\Contents\Frameworks\GLUT.framework\Headers\gutil.h">
+      <Filter>addons\third-party</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxIpVideoGrabber\example\bin\exampleDebug.app\Contents\Frameworks\GLUT.framework\Headers\intersect.h">
+      <Filter>addons\third-party</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxIpVideoGrabber\example\bin\exampleDebug.app\Contents\Frameworks\GLUT.framework\Headers\port.h">
+      <Filter>addons\third-party</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxIpVideoGrabber\example\bin\exampleDebug.app\Contents\Frameworks\GLUT.framework\Headers\rot.h">
+      <Filter>addons\third-party</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxIpVideoGrabber\example\bin\exampleDebug.app\Contents\Frameworks\GLUT.framework\Headers\segment.h">
+      <Filter>addons\third-party</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxIpVideoGrabber\example\bin\exampleDebug.app\Contents\Frameworks\GLUT.framework\Headers\tube.h">
+      <Filter>addons\third-party</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxIpVideoGrabber\example\bin\exampleDebug.app\Contents\Frameworks\GLUT.framework\Headers\tube_gc.h">
+      <Filter>addons\third-party</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxIpVideoGrabber\example\bin\exampleDebug.app\Contents\Frameworks\GLUT.framework\Headers\vvector.h">
+      <Filter>addons\third-party</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxIpVideoGrabber\example\bin\exampleDebug.app\Contents\Frameworks\GLUT.framework\Versions\A\Headers\copy.h">
+      <Filter>addons\third-party</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxIpVideoGrabber\example\bin\exampleDebug.app\Contents\Frameworks\GLUT.framework\Versions\A\Headers\extrude.h">
+      <Filter>addons\third-party</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxIpVideoGrabber\example\bin\exampleDebug.app\Contents\Frameworks\GLUT.framework\Versions\A\Headers\glsmap.h">
+      <Filter>addons\third-party</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxIpVideoGrabber\example\bin\exampleDebug.app\Contents\Frameworks\GLUT.framework\Versions\A\Headers\glsmapint.h">
+      <Filter>addons\third-party</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxIpVideoGrabber\example\bin\exampleDebug.app\Contents\Frameworks\GLUT.framework\Versions\A\Headers\glut.h">
+      <Filter>addons\third-party</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxIpVideoGrabber\example\bin\exampleDebug.app\Contents\Frameworks\GLUT.framework\Versions\A\Headers\glutbitmap.h">
+      <Filter>addons\third-party</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxIpVideoGrabber\example\bin\exampleDebug.app\Contents\Frameworks\GLUT.framework\Versions\A\Headers\glutf90.h">
+      <Filter>addons\third-party</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxIpVideoGrabber\example\bin\exampleDebug.app\Contents\Frameworks\GLUT.framework\Versions\A\Headers\glutstroke.h">
+      <Filter>addons\third-party</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxIpVideoGrabber\example\bin\exampleDebug.app\Contents\Frameworks\GLUT.framework\Versions\A\Headers\gutil.h">
+      <Filter>addons\third-party</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxIpVideoGrabber\example\bin\exampleDebug.app\Contents\Frameworks\GLUT.framework\Versions\A\Headers\intersect.h">
+      <Filter>addons\third-party</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxIpVideoGrabber\example\bin\exampleDebug.app\Contents\Frameworks\GLUT.framework\Versions\A\Headers\port.h">
+      <Filter>addons\third-party</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxIpVideoGrabber\example\bin\exampleDebug.app\Contents\Frameworks\GLUT.framework\Versions\A\Headers\rot.h">
+      <Filter>addons\third-party</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxIpVideoGrabber\example\bin\exampleDebug.app\Contents\Frameworks\GLUT.framework\Versions\A\Headers\segment.h">
+      <Filter>addons\third-party</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxIpVideoGrabber\example\bin\exampleDebug.app\Contents\Frameworks\GLUT.framework\Versions\A\Headers\tube.h">
+      <Filter>addons\third-party</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxIpVideoGrabber\example\bin\exampleDebug.app\Contents\Frameworks\GLUT.framework\Versions\A\Headers\tube_gc.h">
+      <Filter>addons\third-party</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxIpVideoGrabber\example\bin\exampleDebug.app\Contents\Frameworks\GLUT.framework\Versions\A\Headers\vvector.h">
+      <Filter>addons\third-party</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxIpVideoGrabber\example\bin\exampleDebug.app\Contents\Frameworks\GLUT.framework\Versions\Current\Headers\copy.h">
+      <Filter>addons\third-party</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxIpVideoGrabber\example\bin\exampleDebug.app\Contents\Frameworks\GLUT.framework\Versions\Current\Headers\extrude.h">
+      <Filter>addons\third-party</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxIpVideoGrabber\example\bin\exampleDebug.app\Contents\Frameworks\GLUT.framework\Versions\Current\Headers\glsmap.h">
+      <Filter>addons\third-party</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxIpVideoGrabber\example\bin\exampleDebug.app\Contents\Frameworks\GLUT.framework\Versions\Current\Headers\glsmapint.h">
+      <Filter>addons\third-party</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxIpVideoGrabber\example\bin\exampleDebug.app\Contents\Frameworks\GLUT.framework\Versions\Current\Headers\glut.h">
+      <Filter>addons\third-party</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxIpVideoGrabber\example\bin\exampleDebug.app\Contents\Frameworks\GLUT.framework\Versions\Current\Headers\glutbitmap.h">
+      <Filter>addons\third-party</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxIpVideoGrabber\example\bin\exampleDebug.app\Contents\Frameworks\GLUT.framework\Versions\Current\Headers\glutf90.h">
+      <Filter>addons\third-party</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxIpVideoGrabber\example\bin\exampleDebug.app\Contents\Frameworks\GLUT.framework\Versions\Current\Headers\glutstroke.h">
+      <Filter>addons\third-party</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxIpVideoGrabber\example\bin\exampleDebug.app\Contents\Frameworks\GLUT.framework\Versions\Current\Headers\gutil.h">
+      <Filter>addons\third-party</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxIpVideoGrabber\example\bin\exampleDebug.app\Contents\Frameworks\GLUT.framework\Versions\Current\Headers\intersect.h">
+      <Filter>addons\third-party</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxIpVideoGrabber\example\bin\exampleDebug.app\Contents\Frameworks\GLUT.framework\Versions\Current\Headers\port.h">
+      <Filter>addons\third-party</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxIpVideoGrabber\example\bin\exampleDebug.app\Contents\Frameworks\GLUT.framework\Versions\Current\Headers\rot.h">
+      <Filter>addons\third-party</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxIpVideoGrabber\example\bin\exampleDebug.app\Contents\Frameworks\GLUT.framework\Versions\Current\Headers\segment.h">
+      <Filter>addons\third-party</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxIpVideoGrabber\example\bin\exampleDebug.app\Contents\Frameworks\GLUT.framework\Versions\Current\Headers\tube.h">
+      <Filter>addons\third-party</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxIpVideoGrabber\example\bin\exampleDebug.app\Contents\Frameworks\GLUT.framework\Versions\Current\Headers\tube_gc.h">
+      <Filter>addons\third-party</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxIpVideoGrabber\example\bin\exampleDebug.app\Contents\Frameworks\GLUT.framework\Versions\Current\Headers\vvector.h">
+      <Filter>addons\third-party</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxIpVideoGrabber\example\src\ofApp.h">
+      <Filter>addons\third-party</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxIpVideoGrabber\src\IPVideoGrabber.h">
+      <Filter>addons\third-party</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="..\..\..\addons\ofxIpVideoGrabber\example\icon.rc">
+      <Filter>addons\third-party</Filter>
+    </ResourceCompile>
   </ItemGroup>
 </Project>
