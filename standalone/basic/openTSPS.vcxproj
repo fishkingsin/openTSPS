@@ -115,8 +115,6 @@ xcopy /e /i /y "c:\\Program Files (x86)\PrimeSense\NiTE2\Redist\NiTE2.dll" "$(Pr
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\..\addons\ofxIpVideoGrabber\example\src\main.cpp" />
-    <ClCompile Include="..\..\..\addons\ofxIpVideoGrabber\example\src\ofApp.cpp" />
     <ClCompile Include="..\..\..\addons\ofxIpVideoGrabber\src\IPVideoGrabber.cpp" />
     <ClCompile Include="..\..\..\addons\ofxNetwork\src\ofxTCPClient.cpp" />
     <ClCompile Include="..\..\..\addons\ofxNetwork\src\ofxTCPManager.cpp" />
@@ -214,55 +212,6 @@ xcopy /e /i /y "c:\\Program Files (x86)\PrimeSense\NiTE2\Redist\NiTE2.dll" "$(Pr
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\..\..\addons\ofxIpVideoGrabber\example\bin\exampleDebug.app\Contents\Frameworks\GLUT.framework\Headers\copy.h" />
-    <ClInclude Include="..\..\..\addons\ofxIpVideoGrabber\example\bin\exampleDebug.app\Contents\Frameworks\GLUT.framework\Headers\extrude.h" />
-    <ClInclude Include="..\..\..\addons\ofxIpVideoGrabber\example\bin\exampleDebug.app\Contents\Frameworks\GLUT.framework\Headers\glsmap.h" />
-    <ClInclude Include="..\..\..\addons\ofxIpVideoGrabber\example\bin\exampleDebug.app\Contents\Frameworks\GLUT.framework\Headers\glsmapint.h" />
-    <ClInclude Include="..\..\..\addons\ofxIpVideoGrabber\example\bin\exampleDebug.app\Contents\Frameworks\GLUT.framework\Headers\glut.h" />
-    <ClInclude Include="..\..\..\addons\ofxIpVideoGrabber\example\bin\exampleDebug.app\Contents\Frameworks\GLUT.framework\Headers\glutbitmap.h" />
-    <ClInclude Include="..\..\..\addons\ofxIpVideoGrabber\example\bin\exampleDebug.app\Contents\Frameworks\GLUT.framework\Headers\glutf90.h" />
-    <ClInclude Include="..\..\..\addons\ofxIpVideoGrabber\example\bin\exampleDebug.app\Contents\Frameworks\GLUT.framework\Headers\glutstroke.h" />
-    <ClInclude Include="..\..\..\addons\ofxIpVideoGrabber\example\bin\exampleDebug.app\Contents\Frameworks\GLUT.framework\Headers\gutil.h" />
-    <ClInclude Include="..\..\..\addons\ofxIpVideoGrabber\example\bin\exampleDebug.app\Contents\Frameworks\GLUT.framework\Headers\intersect.h" />
-    <ClInclude Include="..\..\..\addons\ofxIpVideoGrabber\example\bin\exampleDebug.app\Contents\Frameworks\GLUT.framework\Headers\port.h" />
-    <ClInclude Include="..\..\..\addons\ofxIpVideoGrabber\example\bin\exampleDebug.app\Contents\Frameworks\GLUT.framework\Headers\rot.h" />
-    <ClInclude Include="..\..\..\addons\ofxIpVideoGrabber\example\bin\exampleDebug.app\Contents\Frameworks\GLUT.framework\Headers\segment.h" />
-    <ClInclude Include="..\..\..\addons\ofxIpVideoGrabber\example\bin\exampleDebug.app\Contents\Frameworks\GLUT.framework\Headers\tube.h" />
-    <ClInclude Include="..\..\..\addons\ofxIpVideoGrabber\example\bin\exampleDebug.app\Contents\Frameworks\GLUT.framework\Headers\tube_gc.h" />
-    <ClInclude Include="..\..\..\addons\ofxIpVideoGrabber\example\bin\exampleDebug.app\Contents\Frameworks\GLUT.framework\Headers\vvector.h" />
-    <ClInclude Include="..\..\..\addons\ofxIpVideoGrabber\example\bin\exampleDebug.app\Contents\Frameworks\GLUT.framework\Versions\A\Headers\copy.h" />
-    <ClInclude Include="..\..\..\addons\ofxIpVideoGrabber\example\bin\exampleDebug.app\Contents\Frameworks\GLUT.framework\Versions\A\Headers\extrude.h" />
-    <ClInclude Include="..\..\..\addons\ofxIpVideoGrabber\example\bin\exampleDebug.app\Contents\Frameworks\GLUT.framework\Versions\A\Headers\glsmap.h" />
-    <ClInclude Include="..\..\..\addons\ofxIpVideoGrabber\example\bin\exampleDebug.app\Contents\Frameworks\GLUT.framework\Versions\A\Headers\glsmapint.h" />
-    <ClInclude Include="..\..\..\addons\ofxIpVideoGrabber\example\bin\exampleDebug.app\Contents\Frameworks\GLUT.framework\Versions\A\Headers\glut.h" />
-    <ClInclude Include="..\..\..\addons\ofxIpVideoGrabber\example\bin\exampleDebug.app\Contents\Frameworks\GLUT.framework\Versions\A\Headers\glutbitmap.h" />
-    <ClInclude Include="..\..\..\addons\ofxIpVideoGrabber\example\bin\exampleDebug.app\Contents\Frameworks\GLUT.framework\Versions\A\Headers\glutf90.h" />
-    <ClInclude Include="..\..\..\addons\ofxIpVideoGrabber\example\bin\exampleDebug.app\Contents\Frameworks\GLUT.framework\Versions\A\Headers\glutstroke.h" />
-    <ClInclude Include="..\..\..\addons\ofxIpVideoGrabber\example\bin\exampleDebug.app\Contents\Frameworks\GLUT.framework\Versions\A\Headers\gutil.h" />
-    <ClInclude Include="..\..\..\addons\ofxIpVideoGrabber\example\bin\exampleDebug.app\Contents\Frameworks\GLUT.framework\Versions\A\Headers\intersect.h" />
-    <ClInclude Include="..\..\..\addons\ofxIpVideoGrabber\example\bin\exampleDebug.app\Contents\Frameworks\GLUT.framework\Versions\A\Headers\port.h" />
-    <ClInclude Include="..\..\..\addons\ofxIpVideoGrabber\example\bin\exampleDebug.app\Contents\Frameworks\GLUT.framework\Versions\A\Headers\rot.h" />
-    <ClInclude Include="..\..\..\addons\ofxIpVideoGrabber\example\bin\exampleDebug.app\Contents\Frameworks\GLUT.framework\Versions\A\Headers\segment.h" />
-    <ClInclude Include="..\..\..\addons\ofxIpVideoGrabber\example\bin\exampleDebug.app\Contents\Frameworks\GLUT.framework\Versions\A\Headers\tube.h" />
-    <ClInclude Include="..\..\..\addons\ofxIpVideoGrabber\example\bin\exampleDebug.app\Contents\Frameworks\GLUT.framework\Versions\A\Headers\tube_gc.h" />
-    <ClInclude Include="..\..\..\addons\ofxIpVideoGrabber\example\bin\exampleDebug.app\Contents\Frameworks\GLUT.framework\Versions\A\Headers\vvector.h" />
-    <ClInclude Include="..\..\..\addons\ofxIpVideoGrabber\example\bin\exampleDebug.app\Contents\Frameworks\GLUT.framework\Versions\Current\Headers\copy.h" />
-    <ClInclude Include="..\..\..\addons\ofxIpVideoGrabber\example\bin\exampleDebug.app\Contents\Frameworks\GLUT.framework\Versions\Current\Headers\extrude.h" />
-    <ClInclude Include="..\..\..\addons\ofxIpVideoGrabber\example\bin\exampleDebug.app\Contents\Frameworks\GLUT.framework\Versions\Current\Headers\glsmap.h" />
-    <ClInclude Include="..\..\..\addons\ofxIpVideoGrabber\example\bin\exampleDebug.app\Contents\Frameworks\GLUT.framework\Versions\Current\Headers\glsmapint.h" />
-    <ClInclude Include="..\..\..\addons\ofxIpVideoGrabber\example\bin\exampleDebug.app\Contents\Frameworks\GLUT.framework\Versions\Current\Headers\glut.h" />
-    <ClInclude Include="..\..\..\addons\ofxIpVideoGrabber\example\bin\exampleDebug.app\Contents\Frameworks\GLUT.framework\Versions\Current\Headers\glutbitmap.h" />
-    <ClInclude Include="..\..\..\addons\ofxIpVideoGrabber\example\bin\exampleDebug.app\Contents\Frameworks\GLUT.framework\Versions\Current\Headers\glutf90.h" />
-    <ClInclude Include="..\..\..\addons\ofxIpVideoGrabber\example\bin\exampleDebug.app\Contents\Frameworks\GLUT.framework\Versions\Current\Headers\glutstroke.h" />
-    <ClInclude Include="..\..\..\addons\ofxIpVideoGrabber\example\bin\exampleDebug.app\Contents\Frameworks\GLUT.framework\Versions\Current\Headers\gutil.h" />
-    <ClInclude Include="..\..\..\addons\ofxIpVideoGrabber\example\bin\exampleDebug.app\Contents\Frameworks\GLUT.framework\Versions\Current\Headers\intersect.h" />
-    <ClInclude Include="..\..\..\addons\ofxIpVideoGrabber\example\bin\exampleDebug.app\Contents\Frameworks\GLUT.framework\Versions\Current\Headers\port.h" />
-    <ClInclude Include="..\..\..\addons\ofxIpVideoGrabber\example\bin\exampleDebug.app\Contents\Frameworks\GLUT.framework\Versions\Current\Headers\rot.h" />
-    <ClInclude Include="..\..\..\addons\ofxIpVideoGrabber\example\bin\exampleDebug.app\Contents\Frameworks\GLUT.framework\Versions\Current\Headers\segment.h" />
-    <ClInclude Include="..\..\..\addons\ofxIpVideoGrabber\example\bin\exampleDebug.app\Contents\Frameworks\GLUT.framework\Versions\Current\Headers\tube.h" />
-    <ClInclude Include="..\..\..\addons\ofxIpVideoGrabber\example\bin\exampleDebug.app\Contents\Frameworks\GLUT.framework\Versions\Current\Headers\tube_gc.h" />
-    <ClInclude Include="..\..\..\addons\ofxIpVideoGrabber\example\bin\exampleDebug.app\Contents\Frameworks\GLUT.framework\Versions\Current\Headers\vvector.h" />
-    <ClInclude Include="..\..\..\addons\ofxIpVideoGrabber\example\src\ofApp.h" />
     <ClInclude Include="..\..\..\addons\ofxIpVideoGrabber\src\IPVideoGrabber.h" />
     <ClInclude Include="..\..\..\addons\ofxKinect\src\ofxBase3DVideo.h" />
     <ClInclude Include="..\..\..\addons\ofxKinect\src\extra\ofxKinectExtras.h" />
@@ -531,9 +480,7 @@ xcopy /e /i /y "c:\\Program Files (x86)\PrimeSense\NiTE2\Redist\NiTE2.dll" "$(Pr
     <ClInclude Include="..\..\addons\ofxTuioWrapper\src\TuioTcpXmlServer.h" />
     <ClInclude Include="src\tspsApp.h" />
   </ItemGroup>
-  <ItemGroup>
-    <ResourceCompile Include="..\..\..\addons\ofxIpVideoGrabber\example\icon.rc" />
-  </ItemGroup>
+
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets" />
 </Project>

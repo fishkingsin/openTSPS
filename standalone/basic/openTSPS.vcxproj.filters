@@ -274,12 +274,6 @@
     <ClCompile Include="..\..\addons\ofxCv\libs\CLD\src\fdog.cpp">
       <Filter>addons\third-party\ofxCv\libs\CLD\src</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\addons\ofxIpVideoGrabber\example\src\main.cpp">
-      <Filter>addons\third-party</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\addons\ofxIpVideoGrabber\example\src\ofApp.cpp">
-      <Filter>addons\third-party</Filter>
-    </ClCompile>
     <ClCompile Include="..\..\..\addons\ofxIpVideoGrabber\src\IPVideoGrabber.cpp">
       <Filter>addons\third-party</Filter>
     </ClCompile>
